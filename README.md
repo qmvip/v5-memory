@@ -3,7 +3,10 @@
 > AI for Science 认知引擎：基于 V5 势垒方程的科研级长期记忆系统
 
 > 通用大模型全局记忆框架 | V5 Meta Structure Powered
-
+---
+## Commercial Use
+For enterprise license, custom integration or consulting, please contact:
+rhodri777@foxmail.com
 ---
 
 ## 核心定位
