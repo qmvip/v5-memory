@@ -1,11 +1,15 @@
 {
   "name": "@wangyi/v5-memory",
   "version": "1.0.0",
-  "description": "V5 Meta Memory System - Universal LLM Memory Framework",
+  "description": "V5 Meta Memory System - AI for Science Cognitive Engine",
   "main": "src/core/engine/meta_engine.js",
   "type": "module",
   "scripts": {
     "dev": "node src/complete/cli.js",
+    "example:write": "node examples/01-write-memory.js",
+    "example:retrieve": "node examples/02-retrieve-memory.js",
+    "example:experiment": "node examples/03-experiment-loop.js",
+    "example:all": "npm run example:write && npm run example:retrieve && npm run example:experiment",
     "test": "node --test src/**/*.test.js",
     "build:web": "cd src/web/frontend && npm run build",
     "build:ide": "cd src/ide/vscode && npm run build",
@@ -67,7 +71,9 @@
   },
   "typesVersions": {
     "*": {
-      "*": ["src/shared/types/index.ts"]
+      "*": [
+        "src/shared/types/index.ts"
+      ]
     }
   },
   "funding": {

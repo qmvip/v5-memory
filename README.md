@@ -1,6 +1,13 @@
-# V5 元记忆系统 (V5 Memory Meta-System)
+# V5 元记忆系统
+
+> AI for Science 认知引擎：基于 V5 势垒方程的科研级长期记忆系统
 
 > 通用大模型全局记忆框架 | V5 Meta Structure Powered
+---
+## Commercial Use
+For enterprise license, custom integration or consulting, please contact:
+rhodri777@foxmail.com
+---
 
 ## 核心定位
 
@@ -10,6 +17,67 @@
 
 **方程本质**：Sigmoid 函数变体，将「输入匹配度」映射为 0-1 之间的「记忆激活概率」，实现记忆召回/写入的量化决策。
 
+---
+
+## 核心特性
+- 🧠 认知科学驱动：V5 势垒方程（Input=语义/γ=目录）贯穿全流程，复刻大脑记忆跃迁逻辑
+- ⚡ 高效记忆管理：分层存储（Hot/Warm/Cold）+ 混合检索（BM25+向量+知识图谱），检索效率×5
+- 🔬 科研闭环：对接 Graphormer/ViSNet 等科学模型，支持「假设-模拟-实验-反馈」自动化闭环
+- 🖥️ 多模态兼容：解析分子结构/谱图/实验图像，适配材料/生物/物理等科研场景
+- 🧩 生态兼容：支持 MCP 协议，低代码可视化配置，非程序员也能上手
+
+---
+
+## 快速开始
+### 安装
+```bash
+npm install @wayne.evan/v5-memory
+
+---
+
+## 基础使用
+// 引入核心引擎
+import { V5MetaEngine } from 'v5-memory';
+
+// 初始化引擎（配置 V5 势垒方程参数）
+const engine = new V5MetaEngine({
+  gamma: 1.2, // 目录索引陡度
+  barrier: 0.4, // 激活阈值 B
+});
+
+// 写入科研记忆（实验参数）
+await engine.addMemory({
+  content: "EAST 模拟参数：等离子体密度 1e19 m^-3，温度 10keV",
+  type: "experiment", // 记忆类型
+  priority: "hot" // 分层存储（hot/warm/cold）
+});
+
+// 混合检索记忆
+const results = await engine.retrieve("EAST 模拟参数");
+console.log(results);
+
+---
+
+## 实验闭环（科研核心场景）
+// 基于历史记忆生成实验参数建议
+const params = await engine.runExperimentLoop({
+  task: "优化 EAST 等离子体约束时间",
+  model: "Graphormer" // 对接科学基座模型
+});
+console.log(params);
+
+---
+
+## 核心理论
+
+V5 元记忆系统基于「V5 势垒方程」构建：
+P = 1 / (1 + e^(-2·γ·(Input - B)))
+- Input：语义网络（信号强度）
+- γ：目录索引（结构化陡度）
+- B：激活阈值
+- P：记忆激活概率
+
+核心理论已通过预印本公开，商用闭源需标注来源（详见 LICENSE）。
 ---
 
 ## 三大版本
@@ -159,6 +227,47 @@ v5-memory/
 - 本地存储优先，隐私优先
 - 敏感信息自动脱敏
 - 一键清空功能
+
+---
+
+## 开源协议
+本项目基于 MIT 协议开源，补充声明：
+1. 核心理论（V5 势垒方程）知识产权归原作者所有；
+2. 非商用修改/使用：完全自由；
+3. 商用闭源修改：需标注「基于 V5 元记忆系统开发」，否则作者将停止技术支持。
+DOI 10.5281/zenodo.18643634.
+
+详见 [LICENSE](LICENSE)。
+
+To cite this software, please use the following DOI:
+[10.5281/zenodo.18703102](https://doi.org/10.5281/zenodo.18703102)
+
+---
+
+## 作者信息
+**Zheng Yiting**  
+ORCID: [0009-0008-7750-5687](https://orcid.org/0009-0008-7750-5687)
+
+---
+
+## 核心成果引用
+
+### 1. 理论总纲（英文预印本）
+**The Generalized Barrier Equation: A Theory of Everything for Phase Transitions**  
+DOI: [10.5281/ZENODO.18643635](https://doi.org/10.5281/ZENODO.18643635)
+
+### 2. 工程实现（中文预印本）
+**V5 广义势垒方程：临界系统相变的统一理论及其在数字孪生领域的应用**  
+DOI: [10.5281/ZENODO.18703307](https://doi.org/10.5281/ZENODO.18703307)
+
+### 3. 核心代码仓库
+- **V5 元记忆系统 (v5-memory)**  
+  DOI: [10.5281/ZENODO.18703102](https://doi.org/10.5281/ZENODO.18703102)  
+  GitHub: [https://github.com/qmvip/v5-memory](https://github.com/qmvip/v5-memory)
+
+- **TwinCosmos 数字孪生宇宙**  
+  DOI: [10.5281/ZENODO.18703053](https://doi.org/10.5281/ZENODO.18703053)  
+  GitHub: [https://github.com/qmvip/TwinCosmos](https://github.com/qmvip/TwinCosmos)
 
 ---
 
