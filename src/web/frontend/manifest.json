@@ -1,0 +1,64 @@
+/**
+ * V5 Memory Web Edition - Chrome Extension
+ * 
+ * 浏览器插件版，面向写手、视觉设计师
+ * 
+ * 文件结构:
+ * ├── manifest.json
+ * ├── src/
+ * │   ├── background/worker.js
+ * │   ├── content/content.js
+ * │   ├── popup/popup.html
+ * │   ├── popup/popup.js
+ * │   └── options/options.html
+ * └── assets/
+ */
+
+{
+  "manifest_version": 3,
+  "name": "V5 元记忆 - 智能记忆助手",
+  "version": "1.0.0",
+  "description": "跨大模型平台的智能记忆系统，让 AI 记住你的一切",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.chatgpt.com/*",
+    "*://*.claude.ai/*",
+    "*://*.deepseek.com/*",
+    "*://*.gemini.google.com/*"
+  ],
+  "background": {
+    "service_worker": "src/background/worker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.chatgpt.com/*",
+        "*://*.claude.ai/*",
+        "*://*.deepseek.com/*",
+        "*://*.gemini.google.com/*"
+      ],
+      "js": ["src/content/content.js"],
+      "css": ["src/content/content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "assets/icon16.png",
+      "48": "assets/icon48.png",
+      "128": "assets/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "assets/icon16.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  },
+  "options_page": "src/options/options.html"
+}

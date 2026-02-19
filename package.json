@@ -1,0 +1,77 @@
+{
+  "name": "@wangyi/v5-memory",
+  "version": "1.0.0",
+  "description": "V5 Meta Memory System - Universal LLM Memory Framework",
+  "main": "src/core/engine/meta_engine.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node src/complete/cli.js",
+    "test": "node --test src/**/*.test.js",
+    "build:web": "cd src/web/frontend && npm run build",
+    "build:ide": "cd src/ide/vscode && npm run build",
+    "lint": "eslint src/",
+    "format": "prettier --write src/"
+  },
+  "keywords": [
+    "llm",
+    "memory",
+    "ai",
+    "context",
+    "v5",
+    "cognitive",
+    "science"
+  ],
+  "author": "WangYi <wangyi@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wangyi/v5-memory"
+  },
+  "bugs": {
+    "url": "https://github.com/wangyi/v5-memory/issues"
+  },
+  "homepage": "https://github.com/wangyi/v5-memory#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "events": "^3.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0"
+  },
+  "exports": {
+    ".": {
+      "import": "./src/core/engine/meta_engine.js",
+      "types": "./src/shared/types/index.ts"
+    },
+    "./scorer": {
+      "import": "./src/core/engine/scorer.js"
+    },
+    "./storage": {
+      "import": "./src/core/storage/memory_store.js"
+    },
+    "./adapters": {
+      "import": "./src/core/adapt/platform_adapters.js"
+    },
+    "./security": {
+      "import": "./src/core/security/sanitizer.js"
+    },
+    "./protocol": {
+      "import": "./src/core/protocol/mcp.js"
+    },
+    "./visual": {
+      "import": "./src/core/visual/config.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": ["src/shared/types/index.ts"]
+    }
+  },
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/v5-memory"
+  }
+}

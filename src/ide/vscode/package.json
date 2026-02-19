@@ -1,0 +1,95 @@
+{
+  "name": "v5-memory",
+  "displayName": "V5 Memory",
+  "description": "AI 编程记忆助手，让 AI IDE 记住你的一切",
+  "version": "1.0.0",
+  "publisher": "wangyi",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "AI",
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished",
+    "onCommand:v5memory.init",
+    "onCommand:v5memory.recall",
+    "onCommand:v5memory.showPanel"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "commands": {
+      "command": "v5memory.init",
+      "title": "V5: 初始化记忆"
+    },
+    "command": "command": "v5memory.recall",
+      "title": "V5: 召回记忆"
+    },
+    "command": "command": "v5memory.showPanel",
+      "title": "V5: 打开记忆面板"
+    },
+    "views": {
+      "v5memory": [
+        {
+          "id": "v5memory.view",
+          "name": "V5 记忆"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": {
+        "v5memory": {
+          "id": "v5memory",
+          "title": "V5 记忆",
+          "icon": "assets/icon.svg"
+        }
+      }
+    },
+    "configuration": {
+      "title": "V5 Memory",
+      "properties": {
+        "v5memory.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "启用 V5 记忆功能"
+        },
+        "v5memory.gamma": {
+          "type": "number",
+          "default": 0.85,
+          "description": "V5 势垒参数 γ (敏感度)"
+        },
+        "v5memory.barrier": {
+          "type": "number",
+          "default": 0.5,
+          "description": "V5 势垒参数 B (阈值)"
+        },
+        "v5memory.autoExtract": {
+          "type": "boolean",
+          "default": true,
+          "description": "自动从 AI 响应中提取记忆"
+        },
+        "v5memory.autoInject": {
+          "type": "boolean",
+          "default": true,
+          "description": "自动注入记忆到 AI 请求"
+        },
+        "v5memory.platform": {
+          "type": "string",
+          "default": "cursor",
+          "enum": ["cursor", "windsurf", "cline", "custom"],
+          "description": "AI IDE 平台"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "esbuild src/extension.js --bundle --outfile=out/extension.js --external:vscode",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "esbuild": "^0.19.0"
+  }
+}
