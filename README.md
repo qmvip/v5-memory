@@ -28,7 +28,7 @@
 ## 快速开始
 ### 安装
 ```bash
-npm install v5-memory
+npm install @wayne.evan/v5-memory
 
 ### 基础使用
 // 引入核心引擎
