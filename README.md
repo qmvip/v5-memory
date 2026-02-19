@@ -30,7 +30,9 @@
 ```bash
 npm install @wayne.evan/v5-memory
 
-### 基础使用
+---
+
+## 基础使用
 // 引入核心引擎
 import { V5MetaEngine } from 'v5-memory';
 
@@ -51,7 +53,9 @@ await engine.addMemory({
 const results = await engine.retrieve("EAST 模拟参数");
 console.log(results);
 
-### 实验闭环（科研核心场景）
+---
+
+## 实验闭环（科研核心场景）
 // 基于历史记忆生成实验参数建议
 const params = await engine.runExperimentLoop({
   task: "优化 EAST 等离子体约束时间",
