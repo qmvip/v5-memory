@@ -19,3 +19,11 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+ADDITIONAL NOTICE:
+
+This software is based on the V5 Meta-Structure and V5 Barrier Equation, whose core theoretical framework has been published in a preprint. 
+- For non-commercial use and modification, this software is governed solely by the MIT License above.
+- For commercial use, especially in closed-source products, explicit attribution to "WangYi V5 Meta-Structure" and the preprint is required.
+- The author reserves the right to discontinue all technical support for any closed-source derivative that fails to provide proper attribution.
