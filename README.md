@@ -239,6 +239,9 @@ DOI 10.5281/zenodo.18643634.
 
 详见 [LICENSE](LICENSE)。
 
+To cite this software, please use the following DOI:
+[10.5281/zenodo.18703102](https://doi.org/10.5281/zenodo.18703102)
+
 ---
 
 ## 许可证
